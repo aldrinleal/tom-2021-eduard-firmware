@@ -1,83 +1,84 @@
-#include <Arduino.h>
-#include <analogWrite.h>
+#include <DNSServer.h>
 #include <WiFi.h>
+#include <AsyncTCP.h>
+#include "analogWrite.h"
+#include "ESPAsyncWebServer.h"
+#include "SPIFFS.h"
 
-const char* ssid = "motorola one fusion 1789";
-const char* password = "4e8c86864633";
+DNSServer dnsServer;
 
+AsyncWebServer server(80);
 
+class CaptiveRequestHandler : public AsyncWebHandler {
+public:
+    CaptiveRequestHandler() {}
+    virtual ~CaptiveRequestHandler() {}
 
-/*
-#ifdef LEONARDO
-#include <stdint-gcc.h>
-#endif
+    bool canHandle(AsyncWebServerRequest *request){
+      //request->addInterestingHeader("ANY");
+      return true;
+    }
 
-#define LED_PIN 13
-#define OUTPUT_PIN 3
+    void handleRequest(AsyncWebServerRequest *request) {
+      request->send(SPIFFS, "/redirect.html", "text/html", false);
+    }
+};
 
-uint8_t level = 0;
-
-void displayLevel() {
-  Serial.print("Level: ");
-  Serial.println(level);
+void notFound(AsyncWebServerRequest *request) {
+  request->send(404, "text/plain", "Not found");
 }
 
 void setup() {
+  delay(2000);
+
   Serial.begin(115200);
 
-  while (!Serial);
+  Serial.println("Started");
 
-
-  pinMode(LED_PIN, OUTPUT);
-  pinMode(OUTPUT_PIN, OUTPUT);
-
-  for (int i = 0; i < 5; i++) {
-    digitalWrite(LED_PIN, 1);
-    delay(2000);
-    digitalWrite(LED_PIN, 0);
-    delay(1000);
+  // Initialize SPIFFS
+  if(!SPIFFS.begin(true)){
+    Serial.println("An Error has occurred while mounting SPIFFS");
+    return;
   }
 
-  displayLevel();
+  //your other setup stuff...
+  WiFi.softAP("tom-eduard", "tikkumolam2021");
+
+  IPAddress IP = WiFi.softAPIP();
+  Serial.print("AP IP address: ");
+  Serial.println(IP);
+
+  dnsServer.start(53, "*", WiFi.softAPIP());
+
+  server.on("/", HTTP_GET, [](AsyncWebServerRequest *request) {
+      Serial.println(request->url());
+      request->send(SPIFFS, "/index.html", "text/html", false);
+  });
+
+  server.on("/assets/bootstrap.bundle.min.js", [](AsyncWebServerRequest* request) {
+      Serial.println(request->url());
+      request->send(SPIFFS, "/assets/bootstrap.bundle.min.js", "text/javascript", false);
+  });
+  server.on("/assets/core.js", [](AsyncWebServerRequest* request) {
+      Serial.println(request->url());
+      request->send(SPIFFS, "/assets/core.js", "text/javascript", false);
+  });
+  server.on("/assets/bootstrap.min.css", [](AsyncWebServerRequest* request) {
+      Serial.println(request->url());
+      request->send(SPIFFS, "/assets/bootstrap.min.css", "text/css", false);
+  });
+  server.on("/assets/starter-template.css", [](AsyncWebServerRequest* request) {
+      Serial.println(request->url());
+      request->send(SPIFFS, "/assets/starter-template.css", "text/css", false);
+  });
+
+  server.onNotFound(notFound);
+
+  server.addHandler(new CaptiveRequestHandler()).setFilter(ON_AP_FILTER);//only when requested from AP
+
+  server.begin();
 }
 
 void loop() {
-  analogWrite(LED_PIN, level);
-  analogWrite(OUTPUT_PIN, level);
-
-  delay(1000);
-
-  while (true) {
-    while (Serial.available()) {
-      uint8_t ch = Serial.read();
-
-      bool bModified = false;
-
-      switch (ch) {
-        case 'd':
-        case '+': {
-          level += 16;
-          bModified = true;
-          break;
-        }
-        case '0': {
-          level = 0;
-          bModified = true;
-          break;
-        }
-        case 'a':
-        case '-': {
-          level -= 16;
-          bModified = true;
-          break;
-        }
-      }
-
-      if (bModified) {
-        displayLevel();
-        return;
-      }
-    }
-  }
+  dnsServer.processNextRequest();
 }
-*/

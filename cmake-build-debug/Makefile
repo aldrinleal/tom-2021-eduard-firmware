@@ -169,6 +169,33 @@ Z_DUMMY_TARGET/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/build
 .PHONY : Z_DUMMY_TARGET/fast
 
+lib/analogWrite/src/analogWrite.obj: lib/analogWrite/src/analogWrite.cpp.obj
+
+.PHONY : lib/analogWrite/src/analogWrite.obj
+
+# target to build an object file
+lib/analogWrite/src/analogWrite.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/analogWrite/src/analogWrite.cpp.obj
+.PHONY : lib/analogWrite/src/analogWrite.cpp.obj
+
+lib/analogWrite/src/analogWrite.i: lib/analogWrite/src/analogWrite.cpp.i
+
+.PHONY : lib/analogWrite/src/analogWrite.i
+
+# target to preprocess a source file
+lib/analogWrite/src/analogWrite.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/analogWrite/src/analogWrite.cpp.i
+.PHONY : lib/analogWrite/src/analogWrite.cpp.i
+
+lib/analogWrite/src/analogWrite.s: lib/analogWrite/src/analogWrite.cpp.s
+
+.PHONY : lib/analogWrite/src/analogWrite.s
+
+# target to generate assembly for a file
+lib/analogWrite/src/analogWrite.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/analogWrite/src/analogWrite.cpp.s
+.PHONY : lib/analogWrite/src/analogWrite.cpp.s
+
 src/main.obj: src/main.cpp.obj
 
 .PHONY : src/main.obj
@@ -207,6 +234,9 @@ help:
 	@echo "... Debug"
 	@echo "... Production"
 	@echo "... Z_DUMMY_TARGET"
+	@echo "... lib/analogWrite/src/analogWrite.obj"
+	@echo "... lib/analogWrite/src/analogWrite.i"
+	@echo "... lib/analogWrite/src/analogWrite.s"
 	@echo "... src/main.obj"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

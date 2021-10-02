@@ -77,30 +77,45 @@ include CMakeFiles/Z_DUMMY_TARGET.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
 
+CMakeFiles/Z_DUMMY_TARGET.dir/lib/analogWrite/src/analogWrite.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
+CMakeFiles/Z_DUMMY_TARGET.dir/lib/analogWrite/src/analogWrite.cpp.obj: ../lib/analogWrite/src/analogWrite.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/aldrin/projetos/sources/tom-pwm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/lib/analogWrite/src/analogWrite.cpp.obj"
+	/home/aldrin/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/lib/analogWrite/src/analogWrite.cpp.obj -c /home/aldrin/projetos/sources/tom-pwm/lib/analogWrite/src/analogWrite.cpp
+
+CMakeFiles/Z_DUMMY_TARGET.dir/lib/analogWrite/src/analogWrite.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Z_DUMMY_TARGET.dir/lib/analogWrite/src/analogWrite.cpp.i"
+	/home/aldrin/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/aldrin/projetos/sources/tom-pwm/lib/analogWrite/src/analogWrite.cpp > CMakeFiles/Z_DUMMY_TARGET.dir/lib/analogWrite/src/analogWrite.cpp.i
+
+CMakeFiles/Z_DUMMY_TARGET.dir/lib/analogWrite/src/analogWrite.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/lib/analogWrite/src/analogWrite.cpp.s"
+	/home/aldrin/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aldrin/projetos/sources/tom-pwm/lib/analogWrite/src/analogWrite.cpp -o CMakeFiles/Z_DUMMY_TARGET.dir/lib/analogWrite/src/analogWrite.cpp.s
+
 CMakeFiles/Z_DUMMY_TARGET.dir/src/main.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
 CMakeFiles/Z_DUMMY_TARGET.dir/src/main.cpp.obj: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/aldrin/projetos/sources/tom-pwm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/src/main.cpp.obj"
-	/home/aldrin/.platformio/packages/toolchain-atmelavr/bin/avr-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/src/main.cpp.obj -c /home/aldrin/projetos/sources/tom-pwm/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/aldrin/projetos/sources/tom-pwm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/src/main.cpp.obj"
+	/home/aldrin/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/src/main.cpp.obj -c /home/aldrin/projetos/sources/tom-pwm/src/main.cpp
 
 CMakeFiles/Z_DUMMY_TARGET.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Z_DUMMY_TARGET.dir/src/main.cpp.i"
-	/home/aldrin/.platformio/packages/toolchain-atmelavr/bin/avr-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/aldrin/projetos/sources/tom-pwm/src/main.cpp > CMakeFiles/Z_DUMMY_TARGET.dir/src/main.cpp.i
+	/home/aldrin/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/aldrin/projetos/sources/tom-pwm/src/main.cpp > CMakeFiles/Z_DUMMY_TARGET.dir/src/main.cpp.i
 
 CMakeFiles/Z_DUMMY_TARGET.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/src/main.cpp.s"
-	/home/aldrin/.platformio/packages/toolchain-atmelavr/bin/avr-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aldrin/projetos/sources/tom-pwm/src/main.cpp -o CMakeFiles/Z_DUMMY_TARGET.dir/src/main.cpp.s
+	/home/aldrin/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aldrin/projetos/sources/tom-pwm/src/main.cpp -o CMakeFiles/Z_DUMMY_TARGET.dir/src/main.cpp.s
 
 # Object files for target Z_DUMMY_TARGET
 Z_DUMMY_TARGET_OBJECTS = \
+"CMakeFiles/Z_DUMMY_TARGET.dir/lib/analogWrite/src/analogWrite.cpp.obj" \
 "CMakeFiles/Z_DUMMY_TARGET.dir/src/main.cpp.obj"
 
 # External object files for target Z_DUMMY_TARGET
 Z_DUMMY_TARGET_EXTERNAL_OBJECTS =
 
+Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/lib/analogWrite/src/analogWrite.cpp.obj
 Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/src/main.cpp.obj
 Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/build.make
 Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/aldrin/projetos/sources/tom-pwm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Z_DUMMY_TARGET"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/aldrin/projetos/sources/tom-pwm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Z_DUMMY_TARGET"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Z_DUMMY_TARGET.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

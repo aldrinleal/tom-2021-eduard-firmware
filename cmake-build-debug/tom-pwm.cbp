@@ -102,6 +102,27 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/aldrin/projetos/sources/tom-pwm/lib/analogWrite/README.md">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/home/aldrin/projetos/sources/tom-pwm/lib/analogWrite/examples/ledFade/ledFade.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/home/aldrin/projetos/sources/tom-pwm/lib/analogWrite/keywords.txt">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/home/aldrin/projetos/sources/tom-pwm/lib/analogWrite/library.json">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/home/aldrin/projetos/sources/tom-pwm/lib/analogWrite/library.properties">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/home/aldrin/projetos/sources/tom-pwm/lib/analogWrite/src/analogWrite.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/home/aldrin/projetos/sources/tom-pwm/lib/analogWrite/src/analogWrite.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
 		<Unit filename="/home/aldrin/projetos/sources/tom-pwm/src/main.cpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
