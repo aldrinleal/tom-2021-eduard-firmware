@@ -59,14 +59,17 @@ void setup() {
       Serial.println(request->url());
       request->send(SPIFFS, "/assets/bootstrap.bundle.min.js", "text/javascript", false);
   });
+  
   server.on("/assets/core.js", [](AsyncWebServerRequest* request) {
       Serial.println(request->url());
       request->send(SPIFFS, "/assets/core.js", "text/javascript", false);
   });
+
   server.on("/assets/bootstrap.min.css", [](AsyncWebServerRequest* request) {
       Serial.println(request->url());
       request->send(SPIFFS, "/assets/bootstrap.min.css", "text/css", false);
   });
+
   server.on("/assets/starter-template.css", [](AsyncWebServerRequest* request) {
       Serial.println(request->url());
       request->send(SPIFFS, "/assets/starter-template.css", "text/css", false);
