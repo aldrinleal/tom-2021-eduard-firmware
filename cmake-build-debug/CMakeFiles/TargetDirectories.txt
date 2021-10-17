@@ -1,5 +1,0 @@
-/home/aldrin/projetos/sources/tom-pwm/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/aldrin/projetos/sources/tom-pwm/cmake-build-debug/CMakeFiles/Production.dir
-/home/aldrin/projetos/sources/tom-pwm/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/aldrin/projetos/sources/tom-pwm/cmake-build-debug/CMakeFiles/Debug.dir
-/home/aldrin/projetos/sources/tom-pwm/cmake-build-debug/CMakeFiles/Z_DUMMY_TARGET.dir

@@ -1,4 +1,0 @@
-/home/aldrin/.local/share/JetBrains/Toolbox/apps/CLion/ch-1/203.8084.11/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=esp32 -G "CodeBlocks - Unix Makefiles" /home/aldrin/projetos/sources/tom-pwm
--- Configuring done
--- Generating done
--- Build files have been written to: /home/aldrin/projetos/sources/tom-pwm/cmake-build-esp32
